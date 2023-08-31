@@ -15,18 +15,22 @@
 			<div class="div_com">
 				<label asp-for="Title" class="label">Название фильма:</label>
 				<input asp-for="Title" class="input1" />
+				<span asp-validation-for="Title" class="text-danger"></span>
 			</div>
 			<div class="div_com">
 				<label asp-for="Director" class="label">Резиссер:</label>
 				<input type="text" asp-for="Director" class="input1" />
+				<span asp-validation-for="Director" class="text-danger"></span>
 			</div>
 			<div class="div_com">
 				<label asp-for="Genre" class="label">Жанр:</label>
 				<input type="text" asp-for="Genre" class="input1" />
+				<span asp-validation-for="Genre" class="text-danger"></span>
 			</div>
 			<div class="div_com">
 				<label asp-for="Year" class="label">Год выпуска:</label>
 				<input type="text" asp-for="Year" class="input1" />
+				<span asp-validation-for="Year" class="text-danger"></span>
 			</div>
 			<div class="div_com div_com1v">
 				<div class="div_com div_i">
@@ -36,6 +40,7 @@
 			<div class="div_com div_com2v">
 				<label asp-for="Description" class="label">Описание фильма:</label>
 				<textarea asp-for="Description" class="input1 text_area1" cols="30" rows="10"></textarea>
+				<span asp-validation-for="Description" class="text-danger"></span>
 			</div>
 
 			<div class="div_com div_com3v">
@@ -49,3 +54,8 @@
 
 	</div>
 </div>
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
