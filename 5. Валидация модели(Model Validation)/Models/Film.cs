@@ -25,8 +25,7 @@ namespace _5._Валидация_модели_Model_Validation_.Models
 		[Range(1900, 2023)]
 		[Display(Name = "Год выпуска: ")]
 		public int Year { get; set; }
-
-        [Required(ErrorMessage = "Поле должно быть установлено.")]
+		 
         public string? PosterPath { get; set; }
 
 		[Required(ErrorMessage = "Поле должно быть установлено.")]
