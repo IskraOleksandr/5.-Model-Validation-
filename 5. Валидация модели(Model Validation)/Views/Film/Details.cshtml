@@ -10,15 +10,22 @@
 		<h3 class="h3">@Html.DisplayFor(model => model.Title)</h3>
 		<div class="div3">
 			<img src="@Url.Content(Model.PosterPath)" width="250" />
+
 			<h2 class="shadow">
-				Резиссер: <p class="p1">@Html.DisplayFor(model => model.Director) </p>
+				@Html.DisplayNameFor(model => model.Director)
+				<p class="p1">@Html.DisplayFor(model => model.Director) </p>
 			</h2>
+
 			<h2 class="shadow">
-				Жанр: <p class="p2">@Html.DisplayFor(model => model.Genre)</p>
+				@Html.DisplayNameFor(model => model.Genre)
+				<p class="p2">@Html.DisplayFor(model => model.Genre)</p>
 			</h2>
+
 			<h2 class="shadow">
-				Год выпуска: <p class="p3">@Html.DisplayFor(model => model.Year)</p>
+				@Html.DisplayNameFor(model => model.Year)
+				<p class="p3">@Html.DisplayFor(model => model.Year)</p>
 			</h2>
+
 			<p class="shadow p4">@Html.DisplayFor(model => model.Description)</p>
 		</div>
 	</div>
